@@ -2,10 +2,14 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-export default function ProductForm() {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
+export default function ProductForm({
+  name: currentName,
+  description: currentdDescrition,
+  price: currentPrice,
+}) {
+  const [name, setName] = useState(currentName || "");
+  const [description, setDescription] = useState(currentdDescrition || "");
+  const [price, setPrice] = useState(currentPrice || "");
   const [goToProducts, setGoToProducts] = useState(false);
   const router = useRouter();
 
@@ -22,7 +26,6 @@ export default function ProductForm() {
 
   return (
     <form onSubmit={createProduct}>
-      <h1>New Product</h1>
       <label>Product Name</label>
       <input
         type="text"
