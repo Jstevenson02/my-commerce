@@ -24,3 +24,19 @@ label {
 .btn-primary {
   @apply text-white bg-purple-900 px-4 rounded-md py-1;
 }
+
+table {
+  @apply w-full;
+}
+
+table thead tr td {
+  @apply bg-purple-200;
+}
+
+table tr td {
+  @apply border border-purple-300 p-1;
+}
+
+table a {
+  @apply bg-purple-900 text-white text-sm p-1 px-2 rounded-md inline-flex gap-1;
+}
