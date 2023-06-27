@@ -1,5 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react";
-import Layout from "./components/layout.js";
+import Layout from "../components/layout.js";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -15,7 +15,7 @@ export default function Home() {
           <img
             className="rounded-full w-8 h-8"
             src={session?.user?.image}
-            referrerpolicy="no-referrer"
+            referrerPolicy="no-referrer"
             alt="userImg"
           />
           <span className="p-1 pr-2">{session?.user?.name}</span>
